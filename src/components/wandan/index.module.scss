@@ -1,0 +1,505 @@
+@keyframes borderEffect {
+  0% {
+    box-shadow: 0 0 5px 5px #FF62C2;
+  }
+  50% {
+    box-shadow: 0 0 5px 5px #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 5px 5px #FF62C2;
+  }
+}
+.swiper{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .activeTransition {
+    transition: all 0ms ease 0s !important;
+  }
+  .innerBox {
+    position: absolute;
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+    .backgroundOne{
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      .description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 55px;
+        left:12vw;
+        z-index:2;
+        .descriptionImg{
+          width:343px;
+          height:245px
+        }
+        .descriptionText{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .textBig{
+            font-size: 46px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-shadow: 0 14px 27px rgba(0,0,0,0.2);
+            margin-top: 20vh;
+            margin-bottom: 30px;
+          }
+          .textSmall{
+            font-size: 22px;
+            font-weight: 400;
+            color: #FFFFFF;
+            opacity: 0.8;
+            text-shadow: 0 5px 9px rgba(0,0,0,0.2);
+          }
+        }
+      }
+      .Immediately{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 75vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index:2;
+        .ImmediatelyButton{
+          background-color: transparent;
+          background-image: url('~@/assets/images/wandan/immdiately.png');
+          background-size: cover; /* 调整背景图尺寸以填充按钮 */
+          width: 347px;
+          height: 104px;
+          border: none; /* 移除按钮边框 */
+          position: relative;
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            border-radius: 60px;
+            animation: borderEffect 3s infinite alternate;
+          }
+        }
+        .ImmediatelyScroll{
+          background-color: transparent;
+          background-image: url('~@/assets/images/wandan/toBottom.png');
+          background-size: cover; /* 调整背景图尺寸以填充按钮 */
+          width: 53px;
+          height: 53px;
+          border: none; /* 移除按钮边框 */
+          transition: transform 0.3s ease; /* 添加过渡效果 */
+          &:hover{
+            transform: translateY(5px); /* 在Y轴方向下移5px */
+          }
+        }
+      }
+    }
+
+    .backgroundTwo{
+      background-image: url('~@/assets/images/wandan/background_two.png');
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 140px;
+        padding-left: 12vw;
+        width:55vw;
+        .textBig{
+          font-size: 46px;
+          font-weight: bold;
+          color: #FFFFFF;
+        }
+        .textMiddle{
+          font-size: 30px;
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: 32px;
+          opacity: 0.8;
+          margin-top: 30px;
+        }
+        .carousel{
+          position:relative;
+          width:41vw;
+          margin-top:35px;
+          border-radius:30px;
+          .carouselItem{
+            border: 4px solid #FF6DF3;
+            border-radius: 30px ;
+            width: 40vw;
+            height: 40vh;
+          }
+          .leftButton{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            z-index: 3;
+          }
+          .rightButton{
+            position:absolute;
+            top:50%;
+            //让有变得按钮不超过图片
+            right:18px;
+            transform:translateY(-50%);
+            z-index: 3;
+          }
+        }
+        .tabBox{
+          width: 41vw;
+          height: 450px;
+          margin-top:20px;
+          display: flex;
+          flex-wrap: nowrap;
+          .tabItemActive{
+            width: 9.5vw;
+            height: 9.5vh;
+            margin-right:12px;
+            border:1px solid #FF6DF3;
+            border-radius:8px;
+            cursor: pointer;
+          }
+          .tabItem{
+            width: 9.5vw;
+            height: 9.5vh;
+            margin-right:12px;
+            border:1px solid transparent;
+            cursor: pointer;
+          }
+        }
+      }
+      .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 26vh;
+        margin-right: 400px;
+        margin-left: 95px;
+        width: 45vw;
+        height: 80vh;
+        z-index:2;
+        .time{
+          display: flex;
+          align-items: center;
+          padding-top: 15px;
+          padding-left: 4vw;
+          font-size: 20px;
+          font-weight: bold;
+          color: #FFFFFF;
+          .onSale{
+            padding:5px;
+            font-weight: bold;
+            font-size: 40px;
+          }
+        }
+        .introduce{
+          font-size: 14px;
+          opacity: 0.9;
+          font-weight: 400;
+          color: #FFFFFF;
+          line-height: 22px;
+        }
+        .price{
+          position:relative;
+          .priceImg{
+            width:30vw;
+            height:70px;
+          }
+          .priceContainer{
+            width:80%;
+            position:absolute;
+            font-size: 20px;
+            margin:0 20px;
+            top:50%;
+            transform: translateY(-50%);
+            left:0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .priceText{
+              font-size: 16px;
+              font-weight: bold;
+              color: #FFFFFF;
+              line-height: 32px;
+              .originalPrice{
+                font-size: 32px;
+                font-weight: bold;
+                color: #FFFFFF;
+                line-height: 32px;
+                margin-right:10px
+              }
+              .discountPrice{
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: line-through;
+                color: #FFFFFF;
+                line-height: 32px;
+                opacity: 0.6;
+              }
+            }
+            .quantity{
+              font-size: 14px;
+              font-weight: 400;
+              color: #FFFFFF;
+              line-height: 44px;
+              opacity: 0.69;
+            }
+          }
+        }
+        .buy{
+          margin:0 auto;
+        }
+        .boxText{
+          display:inline-block;
+          width: 47px;
+          height: 47px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: #FFFFFF;
+          border-radius: 8px;
+          margin:0 8px;
+          //文字居中
+          line-height: 47px;
+          text-align: center;
+        }
+      }
+    }
+
+    .backgroundThree{
+      background-image: url('~@/assets/images/wandan/background_three.png');
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      .top{
+        padding-top:130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bottom{
+        display:flex;
+        max-width: 1440px;
+        justify-content: space-between;
+        margin:0 auto;
+        padding-top: 100px;
+        .bottomImage{
+          transition: opacity 2s ease-in-out;
+          position: relative;
+          .bottomItem{
+            width:230px;
+            height:383px;
+          }
+          .lock{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
+    }
+
+    .backgroundFour{
+      background-image: url('~@/assets/images/wandan/background_four.png');
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      .topLeft{
+        position: absolute;
+        top: 75px;
+        left: 20vw;
+      }
+      .top{
+        position: relative;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .bottom{
+        display:flex;
+        width: 680px;
+        justify-content: space-between;
+        margin:0 auto;
+        padding-top: 30px;
+        position:relative;
+        .bottomLeft{
+          position: absolute;
+          left:78px;
+          top:100px;
+        }
+        .bottomText{
+          margin-top: 10px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 400;
+          color: #000000;
+        }
+        .bottomRight{
+          position: absolute;
+          right:78px;
+          top:100px;
+        }
+      }
+    }
+  }
+  .buttonList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 40vh;
+    right: 20px;
+    width: 162px;
+    height: 350px;
+    z-index: 5;
+    .imageNohoverButton {
+      background-image: url('~@/assets/images/wandan/wd_button.png');
+      background-size: cover; /* 调整背景图尺寸以填充按钮 */
+      width: 162px; /* 设置按钮宽度 */
+      height: 62px; /* 设置按钮高度 */
+      border: none; /* 移除按钮边框 */
+      margin-top: 20px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .imageButton{
+      background: linear-gradient(-91deg, #FF577F 0%, #FF62C2 100%);
+      width: 162px;
+      height: 62px;
+      border: none; /* 移除按钮边框 */
+      opacity: 0.7;
+      margin-top: 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      &:hover{
+        background: linear-gradient(-91deg, #FF577F 100%, #FF62C2 100%);
+      }
+    }
+    .buttonFont{
+      font-size: 20px;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .swiper{
+    .innerBox{
+      .backgroundOne{
+        .description{
+          .descriptionImg{
+          }
+          .descriptionText{
+            .textBig{
+              margin-top: 15vh;
+              margin-bottom: 20px;
+            }
+            .textSmall{
+            }
+          }
+        }
+      }
+      .backgroundTwo{
+        .left{
+          .textMiddle{
+            font-size: 24px;
+            line-height:25px;
+            margin-top:15px;
+          }
+          .carousel{
+            margin-top:20px;
+            .carouselItem{
+              height:37vh;
+            }
+            .rightButton{
+              right:15px;
+            }
+          }
+          .tabBox{
+            margin-top:15px;
+            .tabItemActive{
+              margin-right:10px;
+            }
+            .tabItem{
+              margin-right:10px;
+            }
+          }
+        }
+        .right{
+          padding-top: 26vh;
+          margin-right: 400px;
+          margin-left: 20px;
+          .time{
+            padding-top: 8px;
+            padding-left: 90px;
+            font-size: 15px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            .onSale{
+              padding:5px;
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+          .introduce{
+            font-size: 12px;
+            line-height: 18px;
+            max-width: 400px;
+            margin-top:5px;
+          }
+          .price {
+            position: relative;
+            top:10px;
+          }
+          .buy{
+            margin:20px auto;
+          }
+          .boxText{
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+          }
+        }
+      }
+      .backgroundThree{
+        .bottom{
+          max-width:1100px;
+          .bottomImage{
+            .bottomItem{
+              width: 184px;
+              height: 306px;
+            }
+          }
+        }
+      }
+      .backgroundFour{
+        .topLeft{
+        }
+        .top{
+          top: 20px;
+        }
+        .bottom {
+          margin-top:-65px;
+          .bottomLeft{
+          }
+          .bottomRight{
+          }
+        }
+      }
+    }
+  }
+}
+
+

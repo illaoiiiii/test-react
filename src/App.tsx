@@ -1,5 +1,5 @@
 import './App.css'
-import Genshin from "@/components/genshin"
+import Genshin from "@/components/genshin/genshin"
 
 function App() {
 
