@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: rgba(0, 0, 0, 0.85);
+
+  .face1 {
+    span {
+      background: url("../../assets/xqcq/backgroundFourOne.png") 0 0 no-repeat;
+      transform-origin: bottom;
+    }
+  }
+
+  .face2 {
+    span {
+      background: url("../../assets/xqcq/backgroundFourFour.png") 0 0 no-repeat;
+      transform-origin: bottom;
+    }
+  }
+
+  .face3 {
+    span {
+      background: url("../../assets/xqcq/backgroundFourThree.png") 0 0 no-repeat;
+      transform-origin: bottom;
+    }
+  }
+
+  .face4 {
+    span {
+      background: url("../../assets/xqcq/backgroundFourTwo.png") 0 0 no-repeat;
+      transform-origin: bottom;
+    }
+  }
+
+  .show{
+    transform: rotateX(0deg) translateY(0);
+  }
+
+  .hide{
+    transform: rotateX(90deg) translateY(-50%);
+  }
+
+  .slide {
+    background-repeat: no-repeat;
+    background-size: 100%; /* 使用百分比来设置宽度和自动高度 */
+    background-position: center;
+    width: 100vw;
+    height: 100vh; /* 或者其他适合你的高度值 */
+    overflow: hidden;
+  }
+
+  .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    span {
+      width: 25vw;
+      height: 100vh;
+      transition: 1s;
+      display: inline-block;
+    }
+
+    span:nth-child(1)  {
+      background-position-x: 0;
+      transition-delay: 0s;
+    }
+
+    span:nth-child(2)  {
+      background-position-x: -25vw;
+      transition-delay: 0.2s;
+    }
+
+    span:nth-child(3)  {
+      background-position-x: -50vw;
+      transition-delay: 0.4s;
+    }
+
+    span:nth-child(4)  {
+      background-position-x: -75vw;
+      transition-delay: 0.6s;
+    }
+  }
+
+}
+
+
+.click {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 400px;
+  height: 100px;
+  background: rgba(44, 15, 15, 1);
+  color: #fff;
+  z-index: 10;
+  display: flex;
+}
