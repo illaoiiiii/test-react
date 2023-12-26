@@ -11,33 +11,25 @@ body {
   height: 100vh;
   position: relative;
   background: rgba(0, 0, 0, 0.85);
-
+  //由section41等替代
   .face1 {
-    span {
       background: url("../../assets/xqcq/backgroundFourOne.png") 0 0 no-repeat;
       transform-origin: bottom;
-    }
   }
 
   .face2 {
-    span {
       background: url("../../assets/xqcq/backgroundFourFour.png") 0 0 no-repeat;
       transform-origin: bottom;
-    }
   }
 
   .face3 {
-    span {
       background: url("../../assets/xqcq/backgroundFourThree.png") 0 0 no-repeat;
       transform-origin: bottom;
-    }
   }
 
   .face4 {
-    span {
       background: url("../../assets/xqcq/backgroundFourTwo.png") 0 0 no-repeat;
       transform-origin: bottom;
-    }
   }
 
   .show{
@@ -48,31 +40,29 @@ body {
     transform: rotateX(90deg) translateY(-50%);
   }
 
-  .slide {
-    background-repeat: no-repeat;
-    background-size: 100%; /* 使用百分比来设置宽度和自动高度 */
-    background-position: center;
-    width: 100vw;
-    height: 100vh; /* 或者其他适合你的高度值 */
-    overflow: hidden;
-  }
-
   .face {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%; /* 使用百分比来设置宽度和自动高度 */
+    background-position: center;
+    overflow: hidden;
     display: flex;
 
     span {
-      width: 25vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       transition: 1s;
       display: inline-block;
     }
 
     span:nth-child(1)  {
+      background-repeat: no-repeat;
+      background-size: 100%; /* 使用百分比来设置宽度和自动高度 */
+      background-position: center;
       background-position-x: 0;
       transition-delay: 0s;
     }

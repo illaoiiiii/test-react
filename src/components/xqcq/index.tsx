@@ -18,29 +18,29 @@ function Index() {
                 <div style={{width: '50px',height:'50px',border:'1px solid #fff'}} onClick={()=>handleClick(3)}>3</div>
                 <div style={{width: '50px',height:'50px',border:'1px solid #fff'}} onClick={()=>handleClick(4)}>4</div>
             </div>
-            <div className={classNames(styles.face ,styles.face1, styles.slide)}>
-                <span className={currentIndex===1?styles.show : styles.hide}></span>
-                <span  className={currentIndex===1?styles.show : styles.hide}></span>
-                <span  className={currentIndex===1?styles.show : styles.hide}></span>
-                <span  className={currentIndex===1?styles.show : styles.hide}></span>
+            <div className={classNames(styles.face)}>
+                <span className={classNames(currentIndex===1?styles.show : styles.hide,styles.face1)}></span>
+                {/*<span  className={currentIndex===1?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===1?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===1?styles.show : styles.hide}></span>*/}
             </div>
-            <div className={classNames(styles.face ,styles.face2, styles.slide)}>
-                <span  className={currentIndex===2?styles.show : styles.hide}></span>
-                <span  className={currentIndex===2?styles.show : styles.hide}></span>
-                <span  className={currentIndex===2?styles.show : styles.hide}></span>
-                <span  className={currentIndex===2?styles.show : styles.hide}></span>
+            <div className={classNames(styles.face)}>
+                <span  className={classNames(currentIndex===2?styles.show : styles.hide,styles.face2)}></span>
+                {/*<span  className={currentIndex===2?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===2?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===2?styles.show : styles.hide}></span>*/}
             </div>
-            <div className={classNames(styles.face ,styles.face3, styles.slide)}>
-                <span  className={currentIndex===3?styles.show : styles.hide}></span>
-                <span  className={currentIndex===3?styles.show : styles.hide}></span>
-                <span  className={currentIndex===3?styles.show : styles.hide}></span>
-                <span  className={currentIndex===3?styles.show : styles.hide}></span>
+            <div className={classNames(styles.face)}>
+                <span  className={classNames(currentIndex===3?styles.show : styles.hide,styles.face3)}></span>
+                {/*<span  className={currentIndex===3?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===3?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===3?styles.show : styles.hide}></span>*/}
             </div>
-            <div className={classNames(styles.face ,styles.face4, styles.slide)}>
-                <span  className={currentIndex===4?styles.show : styles.hide}></span>
-                <span  className={currentIndex===4?styles.show : styles.hide}></span>
-                <span  className={currentIndex===4?styles.show : styles.hide}></span>
-                <span  className={currentIndex===4?styles.show : styles.hide}></span>
+            <div className={classNames(styles.face)}>
+                <span  className={classNames(currentIndex===4?styles.show : styles.hide,styles.face4)}></span>
+                {/*<span  className={currentIndex===4?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===4?styles.show : styles.hide}></span>*/}
+                {/*<span  className={currentIndex===4?styles.show : styles.hide}></span>*/}
             </div>
         </div>
     );
